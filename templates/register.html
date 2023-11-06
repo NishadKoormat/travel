@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body style="text-align:center; background-color:RGB(225, 225, 225);">
+<div style="width:350px; height:500px; margin:80px 500px; background-color:white;padding:8px 20px;box-sizing:border-box">
+<h1>Register</h1>
+<form action="register" method="post" >
+{% csrf_token %}
+    <input type="text" name="username" placeholder="Enter user name" style="height:35px; width:100%; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="text" name="firstname" placeholder="Enter your first name" style="height:35px; width:100%; margin:5px 0px; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="text" name="lastname" placeholder="Enter your last name" style="height:35px; width:100%; margin:5px 0px; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="email" name="email" placeholder="Enter your email address" style="height:35px; width:100%; margin:5px 0px; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="password" name="password1" placeholder="Enter password" style="height:35px; width:100%; margin:5px 0px; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="password" name="password2" placeholder="Confirm password" style="height:35px; width:100%; margin:5px 0px; border-radius:8px; padding:15px;box-sizing: border-box;"><br>
+    <input type="submit" value="Create Account" style="background-color:RGB(72, 140, 250);border:none;font-size:20px;font-weight:bold;color:white; height:35px; width:100%; border-radius:8px; padding:5px;box-sizing: border-box;margin:15px 0px;">
+
+</form>
+{% for k in messages %}
+{{k}}
+{% endfor %}
+</div>
+</body>
+</html>
